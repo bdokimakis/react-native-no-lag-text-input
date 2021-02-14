@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.facebook.react.views.textinput;
+package gr.dokimakis.b.nolagtextinput;
 
 import android.os.Build;
 import android.text.SpannableStringBuilder;

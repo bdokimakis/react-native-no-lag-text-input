@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.facebook.react.views.textinput;
+package gr.dokimakis.b.nolagtextinput;
 
 /**
  * Implement this interface to be informed of selection changes in the ReactTextEdit This is used by
