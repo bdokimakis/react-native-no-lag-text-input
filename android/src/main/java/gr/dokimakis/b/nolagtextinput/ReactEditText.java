@@ -469,9 +469,9 @@ public class ReactEditText extends AppCompatEditText {
   }
 
   public void maybeSetTextFromJS(ReactTextUpdate reactTextUpdate) {
-    mIsSettingTextFromJS = true;
-    maybeSetText(reactTextUpdate);
-    mIsSettingTextFromJS = false;
+    // mIsSettingTextFromJS = true;
+    // maybeSetText(reactTextUpdate);
+    // mIsSettingTextFromJS = false;
   }
 
   public void maybeSetTextFromState(ReactTextUpdate reactTextUpdate) {
@@ -518,14 +518,14 @@ public class ReactEditText extends AppCompatEditText {
     if (reactTextUpdate.getText().length() == 0) {
       setText(null);
     } else {
-      String updatedText = reactTextUpdate.getText().toString();
+      // String updatedText = reactTextUpdate.getText().toString();
       // int selectionStart = reactTextUpdate.getText().length();
       // int selectionEnd = reactTextUpdate.getText().length();
       //
       // // When we update text, we trigger onChangeText code that will
       // // try to update state if the wrapper is available. Temporarily disable
       // // to prevent an infinite loop.
-      setText(updatedText);
+      // setText(updatedText);
       // setSelection(selectionStart, selectionEnd);
     }
     mDisableTextDiffing = false;
