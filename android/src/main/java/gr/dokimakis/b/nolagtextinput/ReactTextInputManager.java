@@ -212,9 +212,9 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
       case SET_MOST_RECENT_EVENT_COUNT:
         // TODO: delete, this is no longer used from JS
         break;
-      case SET_TEXT_AND_SELECTION:
-        this.receiveCommand(reactEditText, "setTextAndSelection", args);
-        break;
+      // case SET_TEXT_AND_SELECTION:
+      //   this.receiveCommand(reactEditText, "setTextAndSelection", args);
+      //   break;
     }
   }
 
@@ -230,24 +230,24 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
       case "blurTextInput":
         reactEditText.clearFocusFromJS();
         break;
-      case "setTextAndSelection":
-        int mostRecentEventCount = args.getInt(0);
-        if (mostRecentEventCount == UNSET) {
-          return;
-        }
-
-        String text = args.getString(1);
-
-        int start = args.getInt(2);
-        int end = args.getInt(3);
-        if (end == UNSET) {
-          end = start;
-        }
-
-        reactEditText.maybeSetTextFromJS(
-            getReactTextUpdate(text, mostRecentEventCount, start, end));
-        reactEditText.maybeSetSelection(mostRecentEventCount, start, end);
-        break;
+      // case "setTextAndSelection":
+      //   int mostRecentEventCount = args.getInt(0);
+      //   if (mostRecentEventCount == UNSET) {
+      //     return;
+      //   }
+      //
+      //   String text = args.getString(1);
+      //
+      //   int start = args.getInt(2);
+      //   int end = args.getInt(3);
+      //   if (end == UNSET) {
+      //     end = start;
+      //   }
+      //
+      //   reactEditText.maybeSetTextFromJS(
+      //       getReactTextUpdate(text, mostRecentEventCount, start, end));
+      //   reactEditText.maybeSetSelection(mostRecentEventCount, start, end);
+      //   break;
     }
   }
 
