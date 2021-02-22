@@ -548,16 +548,10 @@ export const Commands: NativeCommands = codegenNativeCommands<NativeCommands>({
 });
 
 let AndroidTextInputNativeComponent;
-if (global.RN$Bridgeless) {
-  ReactNativeViewConfigRegistry.register('AndroidNoLagTextInput', () => {
-    return AndroidTextInputViewConfig;
-  });
-  AndroidTextInputNativeComponent = 'AndroidNoLagTextInput';
-} else {
-  AndroidTextInputNativeComponent = requireNativeComponent<NativeProps>(
-    'AndroidNoLagTextInput',
-  );
-}
+ReactNativeViewConfigRegistry.register('AndroidNoLagTextInput', () => {
+  return AndroidTextInputViewConfig;
+});
+AndroidTextInputNativeComponent = 'AndroidNoLagTextInput';
 
 // flowlint-next-line unclear-type:off
 export default ((AndroidTextInputNativeComponent: any): HostComponent<NativeProps>);

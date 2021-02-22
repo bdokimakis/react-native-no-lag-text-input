@@ -30,7 +30,7 @@ import type {ViewProps} from '../react-native/Libraries/Components/View/ViewProp
 import type {SyntheticEvent, ScrollEvent} from '../react-native/Libraries/Types/CoreEventTypes';
 import type {PressEvent} from '../react-native/Libraries/Types/CoreEventTypes';
 import type {HostComponent} from '../react-native/Libraries/Renderer/shims/ReactNativeTypes';
-import type {TextInputNativeCommands} from './TextInputNativeCommands';
+import type {TextInputNativeCommands} from '../react-native/Libraries/Components/TextInput/TextInputNativeCommands';
 
 const {useEffect, useRef, useState} = React;
 
@@ -44,8 +44,8 @@ let RCTMultilineTextInputView;
 let RCTMultilineTextInputNativeCommands;
 
 if (Platform.OS === 'android') {
-  AndroidTextInput = require('./AndroidNoLagTextInputNativeComponent').default;
-  AndroidTextInputCommands = require('./AndroidNoLagTextInputNativeComponent')
+  AndroidTextInput = require('./AndroidTextInputNativeComponent').default;
+  AndroidTextInputCommands = require('./AndroidTextInputNativeComponent')
     .Commands;
 } else if (Platform.OS === 'ios') {
   RCTSinglelineTextInputView = require('../react-native/Libraries/Components/TextInput/RCTSingelineTextInputNativeComponent')

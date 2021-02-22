@@ -44,8 +44,8 @@ let RCTMultilineTextInputView;
 let RCTMultilineTextInputNativeCommands;
 
 if (Platform.OS === 'android') {
-  AndroidTextInput = require('./AndroidNoLagTextInputNativeComponent').default;
-  AndroidTextInputCommands = require('./AndroidNoLagTextInputNativeComponent')
+  AndroidTextInput = require('./AndroidTextInputNativeComponent').default;
+  AndroidTextInputCommands = require('./AndroidTextInputNativeComponent')
     .Commands;
 } else if (Platform.OS === 'ios') {
   RCTSinglelineTextInputView = require('../react-native/Libraries/Components/TextInput/RCTSingelineTextInputNativeComponent')
